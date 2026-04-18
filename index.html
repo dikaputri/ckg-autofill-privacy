@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kebijakan Privasi – CKG Autofill</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      background: #f4f6f9;
+      color: #1a2332;
+      line-height: 1.7;
+    }
+
+    header {
+      background: linear-gradient(135deg, #1a6b3a 0%, #27a85a 100%);
+      color: #fff;
+      padding: 48px 24px 40px;
+      text-align: center;
+    }
+
+    header .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,0.15);
+      border: 1px solid rgba(255,255,255,0.3);
+      border-radius: 999px;
+      padding: 4px 14px;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      margin-bottom: 18px;
+    }
+
+    header h1 {
+      font-size: clamp(24px, 5vw, 36px);
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    header p {
+      font-size: 15px;
+      opacity: 0.85;
+    }
+
+    main {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 40px 24px 80px;
+    }
+
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 40px;
+    }
+
+    .meta-item {
+      background: #fff;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      padding: 10px 16px;
+      font-size: 13px;
+      color: #4a5568;
+    }
+
+    .meta-item strong {
+      display: block;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: #9aa5b4;
+      margin-bottom: 2px;
+    }
+
+    section {
+      background: #fff;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 28px 32px;
+      margin-bottom: 20px;
+    }
+
+    section h2 {
+      font-size: 17px;
+      font-weight: 700;
+      color: #1a6b3a;
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    section h2 .icon {
+      width: 30px;
+      height: 30px;
+      background: #e8f5ee;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 15px;
+      flex-shrink: 0;
+    }
+
+    p { margin-bottom: 12px; font-size: 15px; color: #334155; }
+    p:last-child { margin-bottom: 0; }
+
+    ul {
+      padding-left: 0;
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+
+    ul li {
+      display: flex;
+      gap: 10px;
+      font-size: 15px;
+      color: #334155;
+    }
+
+    ul li::before {
+      content: "•";
+      color: #27a85a;
+      font-weight: 700;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    .highlight {
+      background: #f0faf4;
+      border-left: 4px solid #27a85a;
+      border-radius: 0 8px 8px 0;
+      padding: 14px 18px;
+      margin: 14px 0;
+      font-size: 14px;
+      color: #1a4731;
+    }
+
+    .warning {
+      background: #fffbeb;
+      border-left: 4px solid #f59e0b;
+      border-radius: 0 8px 8px 0;
+      padding: 14px 18px;
+      margin: 14px 0;
+      font-size: 14px;
+      color: #78350f;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+      margin-top: 12px;
+    }
+
+    th {
+      background: #f8fafc;
+      text-align: left;
+      padding: 10px 14px;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: #64748b;
+      border-bottom: 2px solid #e2e8f0;
+    }
+
+    td {
+      padding: 10px 14px;
+      border-bottom: 1px solid #f1f5f9;
+      color: #334155;
+      vertical-align: top;
+    }
+
+    tr:last-child td { border-bottom: none; }
+
+    .tag {
+      display: inline-block;
+      padding: 2px 10px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    .tag-local { background: #e8f5ee; color: #166534; }
+    .tag-server { background: #fff7ed; color: #9a3412; }
+    .tag-none { background: #f1f5f9; color: #64748b; }
+
+    .contact-box {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 10px;
+      padding: 18px 20px;
+      margin-top: 14px;
+    }
+
+    .contact-icon {
+      width: 44px;
+      height: 44px;
+      background: #e8f5ee;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      flex-shrink: 0;
+    }
+
+    .contact-info { font-size: 14px; color: #334155; }
+    .contact-info strong { display: block; font-size: 13px; color: #64748b; margin-bottom: 2px; }
+
+    footer {
+      text-align: center;
+      padding: 32px 24px;
+      font-size: 13px;
+      color: #94a3b8;
+      border-top: 1px solid #e2e8f0;
+      background: #fff;
+    }
+
+    footer strong { color: #1a6b3a; }
+
+    @media (max-width: 600px) {
+      section { padding: 20px 18px; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="badge">🏥</div>
+  <h1>Kebijakan Privasi</h1>
+  <p>CKG Autofill Chrome Extension · v1.2</p>
+</header>
+
+<main>
+
+  <div class="meta">
+    <div class="meta-item"><strong>Berlaku sejak</strong>April 2026</div>
+    <div class="meta-item"><strong>Versi ekstensi</strong>v1.2</div>
+    <div class="meta-item"><strong>Developer</strong>DPM</div>
+    <div class="meta-item"><strong>Terakhir diperbarui</strong>April 2026</div>
+  </div>
+
+  <!-- 1. Pendahuluan -->
+  <section>
+    <h2><span class="icon">📋</span> Pendahuluan</h2>
+    <p>
+      CKG Autofill adalah ekstensi Chrome yang dikembangkan untuk membantu petugas administrasi
+      kesehatan dalam mengisi formulir pendaftaran program <strong>Cek Kesehatan Gratis (CKG)</strong>
+      di situs resmi Sehat Indonesiaku (<em>sehatindonesiaku.kemkes.go.id</em>) secara otomatis
+      menggunakan data dari file Excel atau CSV.
+    </p>
+    <p>
+      Kebijakan privasi ini menjelaskan data apa yang dikumpulkan, bagaimana data tersebut
+      digunakan, di mana data disimpan, dan hak-hak pengguna terkait data tersebut.
+    </p>
+    <div class="highlight">
+      Ekstensi ini hanya diperuntukkan bagi petugas resmi yang telah
+      memiliki token aktivasi yang valid.
+    </div>
+  </section>
+
+  <!-- 2. Data yang dikumpulkan -->
+  <section>
+    <h2><span class="icon">🗃️</span> Data yang Dikumpulkan</h2>
+    <p>Berikut rincian data yang diproses oleh ekstensi ini:</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Jenis Data</th>
+          <th>Contoh</th>
+          <th>Disimpan di</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Identitas pasien</strong></td>
+          <td>NIK, nama lengkap, tanggal lahir, jenis kelamin</td>
+          <td><span class="tag tag-local">Lokal (IndexedDB)</span></td>
+        </tr>
+        <tr>
+          <td><strong>Token aktivasi</strong></td>
+          <td>Format DPM-XXXXXX-0000</td>
+          <td><span class="tag tag-local">Lokal (chrome.storage)</span></td>
+        </tr>
+        <tr>
+          <td><strong>Email pengguna</strong></td>
+          <td>Untuk registrasi & cek status akses</td>
+          <td><span class="tag tag-server">Server validasi</span></td>
+        </tr>
+        <tr>
+          <td><strong>Device ID ekstensi</strong></td>
+          <td>ID unik instalasi Chrome</td>
+          <td><span class="tag tag-server">Server validasi</span></td>
+        </tr>
+        <tr>
+          <td><strong>Riwayat web / lokasi / keuangan</strong></td>
+          <td>—</td>
+          <td><span class="tag tag-none">Tidak dikumpulkan</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- 3. Cara penggunaan data -->
+  <section>
+    <h2><span class="icon">⚙️</span> Cara Penggunaan Data</h2>
+    <ul>
+      <li>Data identitas pasien digunakan <strong>hanya</strong> untuk mengisi otomatis field formulir pendaftaran CKG di sehatindonesiaku.kemkes.go.id.</li>
+      <li>Token aktivasi digunakan untuk memverifikasi bahwa pengguna adalah petugas resmi yang berwenang menggunakan ekstensi ini.</li>
+      <li>Email digunakan untuk proses pendaftaran akses dan pengiriman token oleh administrator.</li>
+      <li>Device ID digunakan untuk membatasi satu token per perangkat demi keamanan akses.</li>
+    </ul>
+    <div class="warning">
+      Data pasien <strong>tidak pernah dikirim</strong> ke server mana pun. Semua data pasien
+      hanya tersimpan secara lokal di perangkat pengguna dan tidak meninggalkan browser.
+    </div>
+  </section>
+
+  <!-- 4. Penyimpanan & keamanan -->
+  <section>
+    <h2><span class="icon">🔒</span> Penyimpanan & Keamanan</h2>
+    <ul>
+      <li><strong>Data pasien</strong> disimpan di IndexedDB browser — sepenuhnya lokal, tidak dapat diakses dari luar perangkat.</li>
+      <li><strong>Token & cache validasi</strong> disimpan di <code>chrome.storage.local</code> — hanya dapat dibaca oleh ekstensi ini.</li>
+      <li><strong>Validasi token</strong> dilakukan melalui koneksi HTTPS terenkripsi ke server resmi.</li>
+      <li>Tidak ada database cloud, tidak ada analitik pihak ketiga, tidak ada iklan.</li>
+    </ul>
+    <div class="highlight">
+      Ekstensi tidak menggunakan layanan pihak ketiga seperti Google Analytics, Firebase,
+      Sentry, atau sejenisnya.
+    </div>
+  </section>
+
+  <!-- 5. Berbagi data -->
+  <section>
+    <h2><span class="icon">🚫</span> Data Tidak Dibagikan ke Pihak Ketiga</h2>
+    <p>Kami menyatakan dengan tegas bahwa:</p>
+    <ul>
+      <li>Data pengguna <strong>tidak dijual</strong> kepada pihak mana pun.</li>
+      <li>Data pengguna <strong>tidak ditransfer</strong> ke pihak ketiga di luar keperluan validasi token yang telah dijelaskan.</li>
+      <li>Data pengguna <strong>tidak digunakan</strong> untuk tujuan iklan, profiling, atau analitik komersial.</li>
+      <li>Data pengguna <strong>tidak digunakan</strong> untuk menentukan kelayakan kredit atau pinjaman.</li>
+    </ul>
+  </section>
+
+  <!-- 6. Hak pengguna -->
+  <section>
+    <h2><span class="icon">👤</span> Hak Pengguna</h2>
+    <ul>
+      <li><strong>Hapus data kapan saja</strong> — pengguna dapat menghapus data pasien melalui tombol "Hapus Data" di dalam panel ekstensi.</li>
+      <li><strong>Cabut akses</strong> — token dapat dinonaktifkan oleh administrator atas permintaan pengguna.</li>
+      <li><strong>Uninstall</strong> — menghapus ekstensi akan menghapus semua data lokal secara otomatis.</li>
+    </ul>
+  </section>
+
+  <!-- 7. Kontak -->
+  <section>
+    <h2><span class="icon">📬</span> Hubungi Kami</h2>
+    <p>Jika Anda memiliki pertanyaan atau keberatan terkait kebijakan privasi ini, silakan hubungi: dikaputrimetalica93@gmail.com</p>
+    <div class="contact-box">
+      <div class="contact-icon">🏥</div>
+      <div class="contact-info">
+        <strong>Nama instansi</strong>
+         Developer CKG Autofill
+      </div>
+    </div>
+   
+  </section>
+
+  <!-- 8. Perubahan kebijakan -->
+  <section>
+    <h2><span class="icon">🔄</span> Perubahan Kebijakan</h2>
+    <p>
+      Kebijakan privasi ini dapat diperbarui sewaktu-waktu. Perubahan material akan
+      diinformasikan melalui pembaruan ekstensi di Chrome Web Store. Penggunaan berkelanjutan
+      setelah perubahan dianggap sebagai persetujuan terhadap kebijakan yang diperbarui.
+    </p>
+  </section>
+
+</main>
+
+<footer>
+  © 2026 <strong>DPM Dev</strong> · CKG Autofill v1.2 · Semua hak dilindungi
+</footer>
+
+</body>
+</html>
